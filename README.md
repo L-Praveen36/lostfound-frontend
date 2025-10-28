@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+Lost & Found Web App
+A full-stack web application that enables users to report, track, and recover lost and found items on a campus. This platform is built to streamline the lost-and-found process, improving visibility and increasing the chances of recovering misplaced belongings.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌐 Live Site: https://lostfoundapi.netlify.app 📆 GitHub Repo: https://github.com/L-Praveen36/LostFound
 
-## Available Scripts
+📌 Features
+🧑‍💻 Users
+Report Lost or Found items by submitting a form with title, description, category, photo, and contact info.
+Browse all items with filtering (date, category, location, status).
+Claim items via email/contact link.
+Login/Register with Google authentication.
+🔐 Admin Panel
+Moderate and approve posts.
+Mark items as resolved or archived.
+📱 UI/UX
+Fully responsive layout for desktop & mobile.
+Modal-based sign-in/sign-up forms.
+Searchable & categorized item listings.
+🛠️ Tech Stack
+Frontend
+React.js (with Hooks + Context API)
+Tailwind CSS for responsive design
+Firebase Authentication
+Cloudinary for image uploads
+Backend
+Node.js + Express
+Firebase Admin SDK for auth verification
+MongoDB for item storage
+Nodemailer for contact notifications
+📁 Project Structure
+LostFound/
+🔹 backend/
+│   🔹 routes/          # auth & report routes
+│   🔹 models/          # MongoDB schemas (Item, OTP)
+│   🔹 middlewares/     # Token verification (user/admin)
+│   🔹 utils/           # mailer & Cloudinary config
+│   └── firebaseAdmin.js
+🔹 frontend/
+│   🔹 public/          # static assets, HTML entry
+│   └── src/
+│       🔹 components/  # all UI components (modals, nav, forms)
+│       🔹 pages/       # main app routes
+│       🔹 contexts/    # Theme & Auth contexts
+│       └── firebase.js      # frontend Firebase config
+Getting Started
+Prerequisites
+Node.js ≥ 14
+MongoDB Atlas or local instance
+Firebase project for auth
+Cloudinary account for image storage
+Backend Setup
+cd backend
+npm install
+Create a .env file:
 
-In the project directory, you can run:
+PORT=5000
+MONGO_URI=your_mongodb_uri
+FIREBASE_PROJECT_ID=your_firebase_project_id
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
+Start the backend server:
 
-### `npm start`
+npm start
+Frontend Setup
+cd frontend
+npm install
+npm start
+Features In Progress / Planned
+🔔 Email notifications for matched reports
+🧠 AI-powered image-based search (Future)
+📊 Analytics dashboard for recovery rates
+📱 QR Code for mobile access
+Inspiration
+This project was built as part of a campus initiative to simplify how students and staff recover lost belongings. Traditional noticeboards and group chats are inefficient. We aimed to solve that with a modern, user-friendly interface backed by real-time data and admin moderation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgements
+Firebase
+MongoDB Atlas
+Cloudinary
+Tailwind CSS
+React Icons
+License
+MIT License. See LICENSE for more details.
